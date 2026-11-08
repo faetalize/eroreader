@@ -1,0 +1,66 @@
+{
+  "manifest_version": 3,
+  "name": "eroreader",
+  "version": "0.1.0",
+  "description": "Reader, hands-free mode, progress tracking and local history for E-Hentai and ExHentai.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{49d0a8f7-89d0-40f4-b8ce-82694c6fd6bd}",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "https://e-hentai.org/*",
+    "https://exhentai.org/*",
+    "https://g.e-hentai.org/*",
+    "https://api.e-hentai.org/*",
+    "https://s.exhentai.org/*",
+    "https://ehgt.org/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://e-hentai.org/*",
+        "https://exhentai.org/*",
+        "https://g.e-hentai.org/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "eroreader",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  },
+  "options_ui": {
+    "page": "settings.html",
+    "open_in_tab": true
+  }
+}

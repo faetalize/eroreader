@@ -1,0 +1,25 @@
+{
+  "name": "eroreader",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tests",
+    "test": "vitest run",
+    "lint": "npm run build && web-ext lint --source-dir dist",
+    "start": "npm run build && web-ext run --source-dir dist",
+    "package": "npm run build && web-ext build --source-dir dist --overwrite-dest"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "@types/webextension-polyfill": "0.12.6",
+    "esbuild": "0.28.2",
+    "fake-indexeddb": "6.2.7",
+    "happy-dom": "21.0.4",
+    "typescript": "7.0.2",
+    "vitest": "5.1.0",
+    "web-ext": "10.8.0"
+  }
+}

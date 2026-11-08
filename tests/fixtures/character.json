@@ -1,0 +1,20 @@
+{
+  "pill": "Narrator · {speed}×",
+  "events": {
+    "start": ["Here we go.", "*opens the book* Off we go.", "Turning the pages for you.", "Starting now.", "Let's read."],
+    "locked": ["Holding this pace."],
+    "stopped": ["Stopped."],
+    "speed_slow": ["Taking it slowly."],
+    "speed_fast": ["Picking up speed."],
+    "speed_hold": ["Holding still."],
+    "reverse": ["Going back a little."],
+    "halfway": ["Halfway there."],
+    "almost_end": ["Nearly done."],
+    "end": ["That's the last page."],
+    "late_night": ["Reading late tonight."],
+    "finished_count": ["Finished the {count} gallery today."]
+  },
+  "rare": {
+    "start": ["*stretches* Ready when you are."]
+  }
+}

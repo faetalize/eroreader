@@ -1,0 +1,5 @@
+node_modules/
+dist/
+web-ext-artifacts/
+# Pages saved from a logged-in browser. They can contain account details: never commit them.
+fixtures-private/
